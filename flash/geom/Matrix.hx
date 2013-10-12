@@ -112,6 +112,10 @@ class Matrix {
 	public function transformPoint(o:Point):Point {
 		return new Point(o.x * a + o.y * c + tx, o.x * b + o.y * d + ty);
 	}
+
+    public function deltaTransformPoint(o : Point) : Point {
+        return new Point(o.x * a + o.y * c, o.x * b + o.y * d);
+    }
 	
 	/// toString methods
 	/** Converts to string presentation */
